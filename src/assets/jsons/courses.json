@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "JavaScript վեբ ծրագրավորում",
+    "duration": "9 ամիս",
+    "price": "50.000Դ",
+    "topics": "Հիմունքներ, DOM, Իվենթներ, ՕՕԾ, Ասինխրոն, React",
+    "bonus": "Համակարգիչ նվեր!",
+    "del": false
+  },
+  {
+    "id": 2,
+    "title": "C# ծրագրավորում",
+    "duration": "8 ամիս",
+    "price": "60.000Դ",
+    "topics": "Սինտաքսիս, ՕՕԾ, LINQ, WinForms, ASP.NET",
+    "bonus": "Նախագծի սերտիֆիկատ",
+    "del": false
+  },
+  {
+    "id": 3,
+    "title": "Python ծրագրավորում",
+    "duration": "7 ամիս",
+    "price": "55.000Դ",
+    "topics": "Հիմունքներ, Տվյալների տիպեր, ՕՕԾ, Django, API-ներ",
+    "bonus": "",
+    "del": false
+  },
+  {
+    "id": 4,
+    "title": "PHP վեբ ծրագրավորում",
+    "duration": "6 ամիս",
+    "price": "50.000Դ",
+    "topics": "Սինտաքսիս, Ձևեր, MySQL, Սեսիաներ, Laravel",
+    "bonus": "Պրակտիկայի հնարավորություն",
+    "del": false
+  },
+  {
+    "id": 5,
+    "title": "C++ ծրագրավորում",
+    "duration": "8 ամիս",
+    "price": "60.000Դ",
+    "topics": "Հիմունքներ, ՕՕԾ, Ցուցիչներ, STL, Ֆայլերի մշակում",
+    "bonus": "",
+    "del": false
+  }
+]
