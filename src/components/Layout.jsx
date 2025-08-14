@@ -5,7 +5,7 @@ import {Outlet} from "react-router-dom";
 
 function Layout(props) {
     return (
-        <div className={'flex'}>
+        <div className={'xl2:flex'}>
             <Header/>
             <Outlet/>
         </div>

@@ -19,7 +19,7 @@ function Courses(props) {
     }
     return (
         <div className={'flex justify-end bg-[#f2f2f2] w-full'}>
-            <div className={'w-[calc(100%-350px)] flex p-5 flex-wrap min-h-[100vh]'}>
+            <div className={'w-[calc(100%-350px)] flex justify-start md:justify-center p-5 flex-wrap min-h-[100vh]'}>
                 {coursesData.filter((course) => course.del === false).map((item) => (
                     <div
                         className="rounded-xl m-2 bg-white max-w-[350px] h-[350px] flex justify-center p-5 shadow-md hover:shadow-xl transition-shadow duration-500 cursor-pointer">
