@@ -71,7 +71,7 @@ function Users() {
 
     return (
         <div className="flex justify-end bg-gray-50 w-full">
-            <div className="w-[calc(100%-350px)] p-5 min-h-screen">
+            <div className="w-[calc(100%-80px)] xl:w-[calc(100%-350px)] p-5 min-h-screen">
                 <h1 className="text-2xl font-bold text-gray-800 mb-6">Code Battle Մասնակիցներ</h1>
 
                 <div className="flex flex-col md:flex-row gap-4 mb-6">
