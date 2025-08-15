@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Users from "./pages/Users.jsx";
@@ -11,7 +11,7 @@ import Documents from "./pages/Documents.jsx";
 
 function App(props) {
     return (
-        <BrowserRouter basename="/AdminPanel">
+        <HashRouter basename="/AdminPanel">
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Dashboard />} />
@@ -22,7 +22,7 @@ function App(props) {
                     <Route path="documents" element={<Documents />} />
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
