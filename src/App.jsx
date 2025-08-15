@@ -11,7 +11,7 @@ import Documents from "./pages/Documents.jsx";
 
 function App(props) {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/AdminPanel">
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Dashboard />} />
