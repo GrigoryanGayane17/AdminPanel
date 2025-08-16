@@ -4,5 +4,5 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   base: '/AdminPanel/',
-  plugins: [react()],
+  plugins: [react(),tailwindcss()],
 });
