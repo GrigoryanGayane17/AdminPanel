@@ -13,7 +13,7 @@ const basename = import.meta.env.MODE === "production" ? "/AdminPanel" : "/";
 
 function App(props) {
     return (
-        <HashRouter basename={basename}>
+        <HashRouter basename="/AdminPanel">
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Dashboard />} />
