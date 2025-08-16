@@ -12,7 +12,7 @@ function Header(props) {
     }
 
     return (
-        <div className={'w-[90px]  xl:w-[350px] bg-[#90C461] min-h-[100vh] fixed top-0 left-0'}>
+        <div className={'w-[60px]  xl:w-[300px] bg-[#90C461] min-h-[100vh] fixed top-0 left-0'}>
             <div className={'hidden xl:block'}>
                 <div className={'p-5 bg-[#9EDC68FF] leading-[25px]'}>
                     <h1 className={' text-[30px] text-white'}>Admin Panel</h1>
@@ -31,7 +31,7 @@ function Header(props) {
 
                     <div
                         className={'flex items-center hover:bg-[#9EDC68FF] w-full pt-2 pb-2 pe-4 ps-4 duration-300 rounded-xl '}>
-                        <svg className="w-9 h-9 text-[#f2f2f2] fill-current"
+                        <svg className="w-10 h-10 text-[#f2f2f2] fill-current"
                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
                             <path
                                 d="M96 160C96 124.7 124.7 96 160 96L480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 160zM160 224L160 480L288 480L288 224L160 224zM480 224L352 224L352 480L480 480L480 224z"/>
@@ -124,8 +124,8 @@ function Header(props) {
                 </NavLink>
 
                 <button onClick={LogOpen}
-                        className={'ms-2 rounded-xl p-4 flex items-center cursor-pointer hover:bg-[#9EDC68FF] duration-200'}>
-                    <svg  className="w-9 h-9 text-[#f2f2f2] fill-current"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M224 160C241.7 160 256 145.7 256 128C256 110.3 241.7 96 224 96L160 96C107 96 64 139 64 192L64 448C64 501 107 544 160 544L224 544C241.7 544 256 529.7 256 512C256 494.3 241.7 480 224 480L160 480C142.3 480 128 465.7 128 448L128 192C128 174.3 142.3 160 160 160L224 160zM566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L438.6 169.3C426.1 156.8 405.8 156.8 393.3 169.3C380.8 181.8 380.8 202.1 393.3 214.6L466.7 288L256 288C238.3 288 224 302.3 224 320C224 337.7 238.3 352 256 352L466.7 352L393.3 425.4C380.8 437.9 380.8 458.2 393.3 470.7C405.8 483.2 426.1 483.2 438.6 470.7L566.6 342.7z"/></svg>
+                        className={'ms-2 rounded-xl p-2 md:p-4  flex items-center cursor-pointer hover:bg-[#9EDC68FF] duration-200'}>
+                    <svg  className="w-7 h-7 md:w-9 md:h-9 text-[#f2f2f2] fill-current"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M224 160C241.7 160 256 145.7 256 128C256 110.3 241.7 96 224 96L160 96C107 96 64 139 64 192L64 448C64 501 107 544 160 544L224 544C241.7 544 256 529.7 256 512C256 494.3 241.7 480 224 480L160 480C142.3 480 128 465.7 128 448L128 192C128 174.3 142.3 160 160 160L224 160zM566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L438.6 169.3C426.1 156.8 405.8 156.8 393.3 169.3C380.8 181.8 380.8 202.1 393.3 214.6L466.7 288L256 288C238.3 288 224 302.3 224 320C224 337.7 238.3 352 256 352L466.7 352L393.3 425.4C380.8 437.9 380.8 458.2 393.3 470.7C405.8 483.2 426.1 483.2 438.6 470.7L566.6 342.7z"/></svg>
                     <span className={'text-white text-[20px] ms-2 hidden xl:block'}>Լոգաութ</span>
                 </button>
 

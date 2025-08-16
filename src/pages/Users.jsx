@@ -55,7 +55,6 @@ function Users() {
     }, [data, searchTerm, searchField]);
 
 
-
     const renderNoData = (title, message, iconPath) => (
         <div className="text-center py-12 bg-white shadow sm:rounded-lg">
             <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -67,12 +66,10 @@ function Users() {
     );
 
 
-
-
     return (
         <div className="flex justify-end bg-gray-50 w-full">
-            <div className="w-[calc(100%-80px)] xl:w-[calc(100%-350px)] p-5 min-h-screen">
-                <h1 className="text-2xl font-bold text-gray-800 mb-6">Code Battle Մասնակիցներ</h1>
+            <div className="w-[calc(100%-60px)] xl:w-[calc(100%-300px)] p-5 min-h-screen">
+                <h1 className="text-[15px] font-bold text-gray-800 mb-6">Code Battle Մասնակիցներ</h1>
 
                 <div className="flex flex-col md:flex-row gap-4 mb-6">
                     <div className="relative flex-grow">
@@ -124,57 +121,88 @@ function Users() {
                         ? (
                             <div className="bg-white shadow overflow-hidden sm:rounded-lg">
                                 <table className="min-w-full divide-y divide-gray-200">
+                                    {/* ... (previous code remains the same until the table header) ... */}
                                     <thead className="bg-gray-50">
                                     <tr>
-                                        {['Անուն Ազգանուն', 'Էլ․Հասցե', 'Հեռաղոսահամար', 'Գործողություն'].map(header => (
-                                            <th key={header}
-                                                className="px-6 py-3 text-left text-xs bg-[#9DDA68FF] font-medium text-gray-500 uppercase tracking-wider">
-                                                {header}
-                                            </th>
-                                        ))}
+                                        <th className="px-6 py-3 hidden sm:table-cell text-left text-xs bg-[#9DDA68] font-medium text-gray-700 uppercase tracking-wider">
+                                            Անուն Ազգանուն
+                                        </th>
+                                        <th className="px-6 py-3 hidden md:table-cell text-left text-xs bg-[#9DDA68] font-medium text-gray-700 uppercase tracking-wider">
+                                            Էլ․Հասցե
+                                        </th>
+                                        <th className="px-6 py-3 hidden medium:table-cell text-left text-xs bg-[#9DDA68] font-medium text-gray-700 uppercase tracking-wider">
+                                            Հեռախոսահամար
+                                        </th>
+                                        <th className="px-6 py-3 hidden lg:table-cell text-left text-xs bg-[#9DDA68] font-medium text-gray-700 uppercase tracking-wider">
+                                            Գործողություն
+                                        </th>
                                     </tr>
                                     </thead>
+
                                     <tbody className="bg-white divide-y divide-gray-200">
                                     {filteredUsers.map(user => (
                                         <tr key={user.id} className="hover:bg-gray-50">
-                                            <td className="px-6 py-4 whitespace-nowrap flex items-center">
-                                                <div
-                                                    className={'w-[50px] flex justify-center items-center h-[50px] rounded-[50%] bg-[#9DDA68FF] text-[20px] text-white'}>
-                                                    {user.firstName[0]}
+                                            <td className="px-2 md:px-6 py-4 whitespace-nowrap flex items-center">
+                                                <div className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] flex justify-center items-center rounded-[50%] bg-[#9DDA68FF] text-[20px] text-white">
+                                                    {user.firstName?.[0]}
                                                 </div>
                                                 <div className="ml-4">
-                                                    <div
-                                                        className="text-sm font-medium text-gray-900">{user.fullName}</div>
-                                                    <div
-                                                        className="text-sm text-gray-500">{user.specialization} | {user.languages}</div>
-
-                                                    <div className="text-sm text-gray-500">{user.status}</div>
-
+                                                    <div className="text-[10px] md:text-sm font-medium text-gray-900">{user.fullName}</div>
+                                                    <div className="text-[10px] md:text-sm text-gray-500">{user.specialization}</div>
+                                                    <div className="text-[10px] md:text-sm text-gray-500">{user.languages}</div>
+                                                    <div className="block text-[10px] md:text-sm text-gray-500 medium:hidden">
+                                                        {user.phone}
+                                                    </div>
+                                                    <div className="block md:hidden text-[10px] text-gray-500">
+                                                        {user.email}
+                                                    </div>
+                                                    <div className="text-[10px] md:text-sm text-gray-500">{user.status}</div>
+                                                    <div className="mt-2 block lg:hidden space-x-2">
+                                                        <button
+                                                            onClick={() => {
+                                                                setEditUser(true);
+                                                                setCurrentUser(user);
+                                                            }}
+                                                            className="px-3 py-1 bg-[#9DDA68FF] text-white rounded-md text-xs"
+                                                        >
+                                                            Edit
+                                                        </button>
+                                                        <button
+                                                            onClick={() => Delete(user)}
+                                                            className="px-3 py-1 bg-red-600 text-white rounded-md text-xs"
+                                                        >
+                                                            Delete
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </td>
-                                            <td className="px-6 py-4 text-sm text-gray-500">{user.email}</td>
-                                            <td className="px-6 py-4 text-sm text-gray-500">{user.phone}</td>
-                                            <td className="px-6 py-4 text-right text-sm">
+                                            <td className="px-6 py-4 hidden md:table-cell text-sm text-gray-500">
+                                                {user.email}
+                                            </td>
+                                            <td className="px-6 py-4 hidden medium:table-cell text-sm text-gray-500">
+                                                {user.phone}
+                                            </td>
+                                            <td className="px-6 py-4 hidden lg:table-cell text-sm">
                                                 <button
                                                     onClick={() => {
                                                         setEditUser(true);
                                                         setCurrentUser(user);
                                                     }}
-                                                    className="px-4 cursor-pointer py-2 mr-3 bg-[#9DDA68FF] text-white font-semibold rounded-lg shadow-md hover:bg-[#749F4DFF] transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                                    className="px-4 m-2 py-2 bg-[#9DDA68FF] text-white rounded-md mr-2"
                                                 >
                                                     Edit
                                                 </button>
-
-                                                <button onClick={() => Delete(user)}
-                                                        className={"px-4 cursor-pointer py-2 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-400"}
+                                                <button
+                                                    onClick={() => Delete(user)}
+                                                    className="px-4 m-2 py-2 bg-red-600 text-white rounded-md"
                                                 >
                                                     Delete
                                                 </button>
-
                                             </td>
                                         </tr>
                                     ))}
                                     </tbody>
+                                    {/* ... (rest of the code remains the same) ... */}
                                 </table>
                             </div>
                         )

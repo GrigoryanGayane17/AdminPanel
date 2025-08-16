@@ -1,5 +1,7 @@
+/* v4: single import */
 @import "tailwindcss";
 
-
-
-
+/* define your custom screen here */
+@theme {
+    --breakpoint-medium: 930px;   /* gives you `medium:` */
+}
